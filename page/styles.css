@@ -1,0 +1,227 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set up the body to use flex layout */
+body {
+    display: flex;
+    min-height: 100vh; /* Ensure body occupies full height of the viewport */
+    font-family: Arial, sans-serif;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 25%;
+    height: 100vh; /* Set sidebar height to 100% of viewport height */
+    background-color: #333; /* Sidebar background color */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Slight shadow */
+}
+
+/* Sidebar title */
+.sidebar-title {
+    background-color: #444;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px; /* Increased font size for the title */
+    font-weight: bold; /* Make the title bold */
+    border-top-left-radius: 8px; /* Rounded corners */
+    border-top-right-radius: 8px; /* Rounded corners */
+}
+
+.sidebar-content {
+    background-color: #555;
+    padding: 15px;
+    flex-grow: 1; /* Allow this to grow and fill the available space */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Initial message styling */
+#sidebarMessage {
+    background-color: transparent; /* Set background to transparent */
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    width: 100%;
+    color: white;
+    text-align: center; /* Center the text horizontally */
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Faint line underneath the text */
+}
+
+/* Divider line styling */
+.divider-line {
+    height: 2px; /* Height of the line */
+    background-color: rgba(255, 255, 255, 0.2); /* Faint line color */
+    margin-top: 10px; /* Space above the line */
+    margin-bottom: 10px; /* Space below the line */
+    width: 100%; /* Ensure it spans the full width */
+}
+
+/* Button container styling */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Aligns buttons vertically */
+    margin: 10px 0; /* Space around the button container */
+}
+
+/* Button styling in the sidebar */
+.sidebar-content button {
+    background-color: #666; /* Background color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    padding: 10px; /* Padding inside the button */
+    margin: 0 5px 0 0; /* Space between buttons */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    height: 40px; /* Set a specific height for consistency */
+    flex: 4; /* Allow the main button to take up 4/5 of the space */
+}
+
+/* Delete button styling */
+.delete-btn {
+    background-color: #666; /* Set the same background color as the other buttons */
+    color: white; /* Keep the icon color white */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+    height: 40px; /* Match the height of the navigation button */
+    font-size: 20px; /* Increase the font size for better visibility */
+    display: flex; /* Use flex to center the text */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    flex: 1; /* Allow the delete button to take up 1/5 of the space */
+}
+
+/* Add hover effect for the delete button */
+.delete-btn:hover {
+    background-color: rgba(231, 76, 60, 1); /* Red background on hover */
+}
+
+/* Custom scrollbar styles */
+.sidebar-content::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+
+.sidebar-content::-webkit-scrollbar-thumb {
+    background-color: #777; /* Scroll thumb color (slightly darker than sidebar background) */
+    border-radius: 5px; /* Round edges of the scrollbar thumb */
+}
+
+.sidebar-content::-webkit-scrollbar-track {
+    background: #555; /* Track background color */
+}
+
+/* Main content styling */
+.main-content {
+    width: 75%;
+    padding: 20px;
+    background-color: #f0f0f0;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
+}
+
+/* Header styling within main content */
+.main-content header {
+    margin-bottom: 20px;
+}
+
+/* Button styling in main content */
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #777;
+}
+
+/* Search bar styling */
+.search-bar {
+    flex: 1; /* Take up all available space */
+    padding: 10px; /* Add padding */
+    border: 1px solid #ccc; /* Border styling */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.search-container {
+    display: flex; /* Use flexbox for horizontal alignment */
+    align-items: center; /* Center elements vertically */
+    width: 60%; /* Set width for the container */
+    margin: 10px auto; /* Center the container */
+}
+
+/* Suggestions container styling */
+.suggestions-container {
+    position: relative; /* For absolute positioning of suggestion items */
+    width: 60%; /* Match the width of the search bar */
+    margin: 0 auto; /* Center it below the search bar */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+/* Individual suggestion item styling */
+.suggestion-item {
+    background-color: #f0f0f0; /* Background for suggestions */
+    padding: 10px; /* Padding around text */
+    border: 1px solid #ccc; /* Border for suggestions */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Hover effect for suggestion items */
+.suggestion-item:hover {
+    background-color: #ddd; /* Change background on hover */
+}
+
+/* Add button styling */
+.add-button {
+    padding: 10px 20px; /* Padding for the button */
+    background-color: #4CAF50; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-left: 10px; /* Space between input and button */
+}
+
+.add-button:hover {
+    background-color: #777; /* Change button color on hover */
+}
+
+/* Table styling */
+.data-table {
+    width: 80%; /* Width of the table */
+    margin-top: 20px; /* Space above the table */
+    border-collapse: collapse; /* Collapse borders */
+    background-color: white; /* Background color of the table */
+    border-radius: 4px; /* Rounded corners */
+    overflow: hidden; /* Clip any overflow */
+}
+
+.data-table th, .data-table td {
+    padding: 10px; /* Padding inside cells */
+    text-align: left; /* Align text to the left */
+    border-bottom: 1px solid #ccc; /* Bottom border for each cell */
+}
+
+.data-table th {
+    background-color: #4CAF50; /* Background color for header */
+    color: white; /* Text color for header */
+}
+
+.data-table tr:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Highlight row on hover */
+}

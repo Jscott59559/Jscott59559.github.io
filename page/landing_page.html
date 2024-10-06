@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sidebar Example</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-title">Weather App</div>
+        <div class="sidebar-content">
+            <div id="sidebarMessage">Recently Viewed Cities.</div>
+        </div>
+    </div>
+    <div class="main-content">
+        <header>
+            <h1 style="text-align: center;">Get the Weather in any City</h1>
+        </header>
+        <div class="search-container"> <!-- Container for search bar and button -->
+            <input type="text" id="cityInput" class="search-bar" placeholder="Enter a city...">
+            <button id="clickButton" class="add-button">View</button> <!-- Button -->
+        </div>
+        <div id="suggestions" class="suggestions-container"></div> <!-- Suggestions container -->
+        <hr class="divider-line"> <!-- Divider line -->
+
+        <!-- Table for displaying city data -->
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Temperature</th>
+                    <th>Forecast</th>
+                </tr>
+            </thead>
+            <!-- Removed tbody for now -->
+        </table>
+    </div>
+    <script src="functions.js"></script>
+</body>
+</html>
